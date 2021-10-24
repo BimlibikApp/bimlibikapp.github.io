@@ -3,6 +3,9 @@
 <form method="POST" action="https://still-beach-48240.herokuapp.com/v3/entry/github/BimlibikApp/bimlibikapp.github.io/main/comments">
   <!-- <input name="options[redirect]" type="hidden" value="https://my-site.com"> -->
   <!-- e.g. "2016-01-02-this-is-a-post" -->
+  <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+  <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+  <input type="hidden" id="comment-replying-to-uid" name="fields[replying_to_uid]" value="">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <label><input name="fields[name]" type="text">Name</label>
   <label><input name="fields[email]" type="email">E-mail</label>
